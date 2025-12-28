@@ -33,7 +33,10 @@ header{
 .container{
     border: 2px solid hsl(207, 69%, 63%);
     
+    
+    
+    
+}
+body{
     background: linear-gradient( 180deg hsl(288, 95%, 86%) ,hsl(0, 77%, 70%));
-    
-    
 }
