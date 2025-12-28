@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
+
+
+header{
+         text-align: center;
+         font-size: 5em;
+         font-family:Mountains of Christmas ,serif;
+}
+#buttonsctn{
+    display: block;
+    text-align: center;
+    
+    
+}
+#count{
+    display: block;
+    text-align: center;
+    font-size: 12em;
+    font-family: Mountains of Christmas ,serif;
+}
+.buttons{
+    padding: 20px 20px;
+    margin: 35px;
+    color: rgb(22, 12, 12);
+    font-size:2em;
+    font-family:Mountains of Christmas , serif;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 4px 3px hsl(286, 100%, 92%);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.container{
+    border: 2px solid hsl(207, 69%, 63%);
+    margin: 200px;
+   
+    
+    
+}
