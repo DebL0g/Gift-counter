@@ -1,47 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
 
 
-header{
-         text-align: center;
-         font-size: 5em;
-         font-family:Mountains of Christmas ,serif;
+header {
+    text-align: center;
+    font-size: 5em;
+    font-family: Mountains of Christmas, serif;
+    color: lab(49.9% 87.51 -71.45);
 }
-#buttonsctn{
+
+#buttonsctn {
     display: block;
     text-align: center;
-    
-    
+
+
 }
-#count{
+
+#count {
     display: block;
     text-align: center;
     font-size: 12em;
-    font-family: Mountains of Christmas ,serif;
-}
-.buttons{
-    padding: 20px 20px;
-    margin: 35px;
-    color: rgb(22, 12, 12);
-    font-size:2em;
-    font-family:Mountains of Christmas , serif;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 4px 3px hsl(286, 100%, 92%);
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
-.container{
-    border: 2px solid hsl(207, 69%, 63%);
-    
-    
-    
-    
+    font-family: Mountains of Christmas, serif;
+    color: lab(49.9% 87.51 -71.45);
 }
 
+.buttons {
+    padding: 20px 20px;
+    margin: 35px;
+    font-size: 2em;
+    font-family: Mountains of Christmas, serif;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 4px 6px hsl(286, 100%, 92%);
+    transition: background-color 0.3s;
+    cursor: pointer;
+    color: hsl(288, 95%, 49%);
+}
+
+.buttons:hover {
+    color: lab(47.34% 15.42 -59.88);
+    transform: translateY(-10px) scale(1.02);
+    background-color: hsl(271, 74%, 79%);
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.container {
+    position: relative;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 22px;
+    margin: 15px;
+    width: 30%;
+    float: left;
+
+    animation: float 4s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 192, 203, 0.3);
+}
+
+
+.container::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 18px;
+    background: linear-gradient(135deg,
+            #ecaec9,
+            #e0c3fc,
+            #c2e9fb);
+    z-index: -1;
+    border: #f3e5fc solid 2px;
+
+}
 body {
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #97bcdf, #c5b1e3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #f4a8f7, #8dd2ee);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
