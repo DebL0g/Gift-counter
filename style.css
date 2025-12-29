@@ -2,40 +2,46 @@
 
 
 header {
-    text-align: center;
-    font-size: 6em;
-    font-family: Mountains of Christmas, serif;
-    color: lab(74.88% -17.29 -18.76);
-
+  text-align: center;
+  font-size: clamp(4rem, 12vw, 6rem);
+  font-family: "Mountains of Christmas", serif;
+  color: lab(74.88% -17.29 -18.76);
 }
+
 
 #buttonsctn {
-    display: block;
-    text-align: center;
-
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(13px, 5vmin, 20px);
+  justify-content: center;
 }
+
 
 #count {
-    display: block;
-    text-align: center;
-    font-size: 12em;
-    font-family: Mountains of Christmas, serif;
-    color: lab(81.05% -10.53 -22.7);
+  text-align: center;
+  font-size: clamp(4rem, 10vw, 13rem);
+  font-family: "Mountains of Christmas", serif;
+  color: lab(81.05% -10.53 -22.7);
 }
 
+
 .buttons {
-    padding: 20px 20px;
-    margin: 35px;
-    font-size: 2em;
-    font-family: Mountains of Christmas, serif;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 4px 6px hsl(286, 100%, 92%);
-    transition: background-color 0.3s;
-    cursor: pointer;
-    color: hsl(209, 77%, 74%);
+  padding: 12px 18px;
+  font-size: clamp(2rem, 5.5vmin, 3rem);
+  font-family: "Mountains of Christmas", serif;
+
+  border: none;
+  border-radius: 18px;
+
+  box-shadow: 4px 6px hsl(286, 100%, 92%);
+  cursor: pointer;
+
+  color: hsl(209, 77%, 74%);
+  background: #f2f2f2;
+
+  transition: transform 0.3s, background-color 0.3s;
 }
+
 
 .buttons:hover {
     color: lab(47.34% 15.42 -59.88);
@@ -59,34 +65,43 @@ header {
 }
 
 .container {
-    position: relative;
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 22px;
-    margin: 15px;
-    width: 35%;
-    float: left;
+  position: relative;
 
-    animation: float 4s ease-in-out infinite;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 20px rgba(255, 192, 203, 0.3);
+  width: min(92vw, 520px);
+  aspect-ratio: 1 / 1;
+
+  padding: clamp(20px, 3vw, 32px);
+
+  background: #ffffff;
+  border-radius: 20px;
+
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.3);
+
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  place-items: center;
+
+  animation: float 4s ease-in-out infinite;
 }
+
+
+
 
 
 .container::before {
-    content: "";
-    position: absolute;
-    inset: -5px;
-    border-radius: 18px;
-    background: linear-gradient(135deg,
-            #daf7f5,
-            #f8e7ed,
-            #c2e8f1);
-    z-index: -1;
-    border: #c7fdf9 solid 2px;
-     position: relative;
-
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    #e9f3f2,
+    #f8f1f4,
+    #eff9fc
+  );
+  z-index: -1;
 }
+
 
 body {
     min-height: 100vh;
@@ -105,38 +120,21 @@ body {
 
 }
 
-a[id^="m"] {
-  position: absolute;
-  display: inline-block;
-}
-#m1 {
-  top: 660px;
-  left: 1090px;
+a[id^="m"] img {
+  width: clamp(48px, 4vw, 64px);
+  height: auto;
 }
 
-#m2 {
-  top: 660px;
-  right: 1090px;
-}
 
-#m3 {
-  top: 353px;
-  left: 1390px;
-}
+#m1 { top: 90%;  left: 88%; }
+#m2 { top: 90%;  right: 88%; }
+#m3 { top: 40%; left: 133%; }
+#m4 { top: 2%; right: 72%; }
+#m5 { bottom: 45%; left: -11.3%; }
+#m6 { bottom: 78%; right: 8%; }
 
-#m4 {
-  bottom: 700px;
-  right: 1090px;
-}
-#m5{
-    bottom: 650px;
-    right: 532px;
-}
-#m6{
-     bottom: 577px;
-     right: 600px;
-    
-}
+
+
 
 @keyframes float {
   0% { transform: translateY(0); }
@@ -150,5 +148,23 @@ a[id^="m"] {
 #m4 { animation: float 4s ease-in-out infinite; }
 #m5 { animation: float 3s ease-in-out infinite; }
 #m6 { animation: float 4s ease-in-out infinite; }
+
+
+.emotectn {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.emotectn a {
+  position: absolute;
+  pointer-events: auto;
+}
+
+.emotectn img {
+  width: clamp(40px, 6vw, 64px);
+  height: auto;
+}
+
 
 
