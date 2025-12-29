@@ -3,9 +3,10 @@
 
 header {
     text-align: center;
-    font-size: 5em;
+    font-size: 6em;
     font-family: Mountains of Christmas, serif;
-    color: lab(49.9% 87.51 -71.45);
+    color: lab(74.88% -17.29 -18.76);
+
 }
 
 #buttonsctn {
@@ -20,7 +21,7 @@ header {
     text-align: center;
     font-size: 12em;
     font-family: Mountains of Christmas, serif;
-    color: lab(49.9% 87.51 -71.45);
+    color: lab(81.05% -10.53 -22.7);
 }
 
 .buttons {
@@ -33,13 +34,13 @@ header {
     box-shadow: 4px 6px hsl(286, 100%, 92%);
     transition: background-color 0.3s;
     cursor: pointer;
-    color: hsl(288, 95%, 49%);
+    color: hsl(209, 77%, 74%);
 }
 
 .buttons:hover {
     color: lab(47.34% 15.42 -59.88);
     transform: translateY(-10px) scale(1.02);
-    background-color: hsl(271, 74%, 79%);
+    background-color: hsl(209, 100%, 81%);
 }
 
 
@@ -63,7 +64,7 @@ header {
     border-radius: 16px;
     padding: 22px;
     margin: 15px;
-    width: 30%;
+    width: 35%;
     float: left;
 
     animation: float 4s ease-in-out infinite;
@@ -78,17 +79,76 @@ header {
     inset: -5px;
     border-radius: 18px;
     background: linear-gradient(135deg,
-            #ecaec9,
-            #e0c3fc,
-            #c2e9fb);
+            #daf7f5,
+            #f8e7ed,
+            #c2e8f1);
     z-index: -1;
-    border: #f3e5fc solid 2px;
+    border: #c7fdf9 solid 2px;
+     position: relative;
 
 }
+
 body {
     min-height: 100vh;
-    background: radial-gradient(circle at top, #f4a8f7, #8dd2ee);
+    background: linear-gradient(45deg, rgb(250, 240, 250), #e6f7fd);
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #acf7fa;
+
+
 }
+
+a[id^="m"] {
+  position: absolute;
+  display: inline-block;
+}
+#m1 {
+  top: 660px;
+  left: 1090px;
+}
+
+#m2 {
+  top: 660px;
+  right: 1090px;
+}
+
+#m3 {
+  top: 353px;
+  left: 1390px;
+}
+
+#m4 {
+  bottom: 700px;
+  right: 1090px;
+}
+#m5{
+    bottom: 650px;
+    right: 532px;
+}
+#m6{
+     bottom: 570px;
+     right: 600px;
+    
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+#m1 { animation: float 3s ease-in-out infinite; }
+#m2 { animation: float 3.5s ease-in-out infinite; }
+#m3 { animation: float 2.8s ease-in-out infinite; }
+#m4 { animation: float 4s ease-in-out infinite; }
+#m5 { animation: float 3s ease-in-out infinite; }
+#m6 { animation: float 4s ease-in-out infinite; }
+
+
