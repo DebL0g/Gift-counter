@@ -17,7 +17,7 @@ header {
 }
 
 
-#count {
+#countL {
   text-align: center;
   font-size: clamp(4rem, 10vw, 13rem);
   font-family: "Mountains of Christmas", serif;
@@ -162,7 +162,7 @@ a[id^="m"] img {
 }
 
 .emotectn img {
-  width: clamp(40px, 6vw, 64px);
+  width: clamp(40px, 6vw, 70px);
   height: auto;
 }
 
